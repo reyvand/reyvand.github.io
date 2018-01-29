@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Standard Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+	<!-- Site Properties -->
+	<title>Masckot Hostel Bali</title>
+	<link rel="stylesheet" type="text/css" href="../dist/components/reset.css">
+	<link rel="stylesheet" type="text/css" href="../dist/components/site.css">
+
+	<link rel="stylesheet" type="text/css" href="../dist/components/container.css">
+	<link rel="stylesheet" type="text/css" href="../dist/components/grid.css">
+	<link rel="stylesheet" type="text/css" href="../dist/components/header.css">
+	<link rel="stylesheet" type="text/css" href="../dist/components/image.css">
+	<link rel="stylesheet" type="text/css" href="../dist/components/menu.css">
+
+	<link rel="stylesheet" type="text/css" href="../dist/components/divider.css">
+	<link rel="stylesheet" type="text/css" href="../dist/components/dropdown.css">
+	<link rel="stylesheet" type="text/css" href="../dist/components/segment.css">
+	<link rel="stylesheet" type="text/css" href="../dist/components/button.css">
+	<link rel="stylesheet" type="text/css" href="../dist/components/list.css">
+	<link rel="stylesheet" type="text/css" href="../dist/components/icon.css">
+	<link rel="stylesheet" type="text/css" href="../dist/components/sidebar.css">
+	<link rel="stylesheet" type="text/css" href="../dist/components/transition.css">
+
+	<link rel="stylesheet" type="text/css" href="../dist/components/table.css">
+
+	<link href="./jeffry.in.slider.css" rel="stylesheet" />
+
+	<style type="text/css">
+
+		.hidden.menu {
+			display: none;
+		}
+
+		.masthead.segment {
+			min-height: 700px;
+			padding: 0em 0em;
+		}
+		.masthead .logo.item img {
+			margin-right: 1em;
+		}
+		.masthead .ui.menu .ui.button {
+			margin-left: 0.5em;
+		}
+		.masthead h1.ui.header {
+			margin-top: -3em;
+			margin-bottom: 0em;
+			font-size: 4em;
+			font-weight: normal;
+			z-index: 999;
+		}
+		.masthead h2 {
+			font-size: 1.7em;
+			font-weight: normal;
+		}
+
+		.head {
+			position: absolute;
+			margin-top: -20em;
+			width: 100%;
+		}
+
+		.ui.vertical.stripe {
+			padding: 0em 0em;
+		}
+		.ui.vertical.stripe h3 {
+			font-size: 2em;
+		}
+		.ui.vertical.stripe .button + h3,
+		.ui.vertical.stripe p + h3 {
+			margin-top: 3em;
+		}
+		.ui.vertical.stripe .floated.image {
+			clear: both;
+		}
+		.ui.vertical.stripe p {
+			font-size: 1.33em;
+		}
+		.ui.vertical.stripe .horizontal.divider {
+			margin: 3em 0em;
+		}
+
+		.quote.stripe.segment {
+			padding: 0em;
+		}
+		.quote.stripe.segment .grid .column {
+			padding-top: 5em;
+			padding-bottom: 5em;
+		}
+
+		.footer.segment {
+			padding: 5em 0em;
+		}
+
+		.secondary.pointing.menu .toc.item {
+			display: none;
+		}
+
+		.anu{
+			-webkit-filter: grayscale(80%);
+			-webkit-transition: all 0.3s ease;
+			cursor: pointer;
+		}
+		.anu img {
+			width: 100%;
+		}
+		.anu:hover {
+			filter: none;
+			-webkit-filter: grayscale(0%);
+		}
+
+		@media only screen and (max-width: 700px) {
+			.ui.fixed.menu {
+				display: none !important;
+			}
+			.secondary.pointing.menu .item,
+			.secondary.pointing.menu .menu {
+				display: none;
+			}
+			.secondary.pointing.menu .toc.item {
+				display: block;
+			}
+			.masthead.segment {
+				min-height: 350px;
+			}
+			.masthead h1.ui.header {
+				font-size: 2em;
+				margin-top: 1.5em;
+			}
+			.masthead h2 {
+				margin-top: 0.5em;
+				font-size: 1.5em;
+			}
+		}
+
+		table {
+			border: 0px;
+		}
+
+	</style>
+
+	<script src="../dist/jquery.min.js"></script>
+	<script src="../dist/components/visibility.js"></script>
+	<script src="../dist/components/sidebar.js"></script>
+	<script src="../dist/components/transition.js"></script>
+	<script src="./jquery.glide.min.js"></script>
+	<script>
+		$(document)
+			.ready(function() {
+
+				// fix menu when passed
+				$('.masthead')
+					.visibility({
+						once: false,
+						onBottomPassed: function() {
+							$('.fixed.menu').transition('fade in');
+						},
+						onBottomPassedReverse: function() {
+							$('.fixed.menu').transition('fade out');
+						}
+					})
+				;
+
+				// create sidebar and attach to menu open
+				$('.ui.sidebar')
+					.sidebar('attach events', '.toc.item')
+				;
+
+			})
+		;
+		$(document).on('click', 'a[href^="#"]', function (event) {
+			event.preventDefault();
+
+			$('html, body').animate({
+					scrollTop: $($.attr(this, 'href')).offset().top
+			}, 700);
+		});
+
+    $(function() {
+    	var path = location.pathname;
+    	$("a[href='" + path + "']").addClass('active');
+		});
+	</script>
+</head>
+<body>
+
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+	<div class="ui container">
+		<a class="item" href="#home">Home</a>
+		<a class="item" href="#location">Location</a>
+		<a class="item" href="#about">About Us</a>
+		<a class="item" href="#facilities">Facilities</a>
+	</div>
+</div>
+
+
+<!-- Page Contents -->
+<div class="pusher">
+	<div class="ui inverted vertical masthead center aligned segment">
+<!-- 
+		<div class="ui container">
+			<div class="ui large secondary inverted pointing menu">
+				<a class="toc item">
+					<i class="sidebar icon"></i>
+				</a>
+				<a class="active item">Home</a>
+				<a class="item">Location</a>
+				<a class="item">About Us</a>
+				<a class="item">Contact</a>
+			</div>
+		</div> -->
+		<section id="home">
+		<div class="ui text">
+			<div class="sixteen wide column">
+				
+				<div class="slider slider1">
+					<div class="slides">
+						<div class="slide-item item1">
+							<img src="https://ucd.hwstatic.com/propertyimages/9/98911/57.jpg" class="ui image">
+						</div>
+						<div class="slide-item item2"> 
+							<img src="https://ucd.hwstatic.com/propertyimages/9/98911/47.jpg" class="ui image">
+						</div>
+						<div class="slide-item item3">
+							<img src="https://ucd.hwstatic.com/propertyimages/9/98911/55.jpg" class="ui image">
+						</div>
+						<div class="slide-item item4">
+							<img src="https://ucd.hwstatic.com/propertyimages/9/98911/84.jpg" class="ui image">
+						</div>
+					</div>
+				</div>
+				<div class="head">
+					<h1 class="ui huge inverted header">
+						Macskot Hostels
+					</h1>
+					<h2 class="ui huge inverted header">Do whatever you want when you want to.</h2>
+					<div class="ui huge primary button"><a href="#location" style="color: #fff;">Our Location</a></div>
+				</div>
+			</div>
+		</div>
+		</section>
+
+	</div>
+	
+	<section id="location">
+  <div class="ui vertical stripe quote segment">
+    <div class="ui equal width stackable internally celled grid">
+      <div class="center aligned row">
+        <div class="column">
+        	<a href="https://www.hostelworld.com/hosteldetails.php/Macskot-Hostel-Bindu/Ubud/280660?source=adwordsdynamic&network=g&creative=230863546732&adposition=1t1&uniqueclickID=11573965252078965588&sub_keyword=&sub_ad=b&sub_publisher=ADW&gclid=CjwKCAiAqbvTBRAPEiwANEkyCB4Ql_FpBAx4PZOHaP7k24i8jzuACk8f7IVxnrsbaQGb8897_yO4cxoCMFEQAvD_BwE&gclsrc=aw.ds" target="blank">
+        	<div class="anu">
+          <img src="https://www.theurbanlist.com/content/general/ubud-header.jpg" class="ui fluid image">
+          <h1 class="ui huge inverted header" style="position: absolute; width: 100%; margin-top: -370px;">Ubud</h1>
+          </div>
+          </a>
+        </div>
+        <div class="column">
+        	<a href="https://www.hostelworld.com/hosteldetails.php/Macskot-Surf-Hostel-Uluwatu/Uluwatu/98911?source=adwordsdynamic&network=g&creative=230863546732&adposition=1t1&uniqueclickID=16512518855760283229&sub_keyword=&sub_ad=b&sub_publisher=ADW&gclid=CjwKCAiAqbvTBRAPEiwANEkyCNOB265_yTCqxSPU9Rf0P8uWZ706F5ehPOzSbc28WOKG0vmATLRVvBoCX2YQAvD_BwE&gclsrc=aw.ds" target="blank">
+        	<div class="anu">
+          <img src="http://static.asiawebdirect.com/m/bangkok/portals/bali-indonesia-com/homepage/attractions/uluwatu-temple/pagePropertiesImage/uluwatu-temple-bali.jpg" class="ui fluid image">
+          <h1 class="ui huge inverted header" style="position: absolute; width: 100%; margin-top: -370px;">Uluwatu</h1>
+          </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+	</section>
+	
+	<section id="about">
+	<div class="ui vertical stripe quote segment">
+		<div class="ui equal width stackable internally celled grid container">
+			<div class="justified aligned row">
+				<div class="twelve wide column">
+					<h3 align="right">About Us</h3>
+					<p style="font-size: 1em;">
+						Macskot hostel delivers the perfect combination of surf, beaches, culture and relaxation in the 'HEART' of uluwatu. Our location right in the central of all favourite beaches in south of bali (with 10-20 minutes driving) to the famous Green bowl beach, Padang-Padang beach, Bingin beach, uluwatu beach, Dreamland beach, Balangan beach, Jimbaran beach, nusa dua beach, atm center ,local warung ,minimarket and only take 20 minutes (5 km) from Ngurah Rai Airport. if you cannot drive scooter its not a big problem because we have a shuttle 3 times a day to the beaches and any attraction in uluwatu with the low and fair price.
+					</p>
+					<p style="font-size: 1em;">
+						All day long we provide , coffee, tea, mineral water and all are free of charge.
+						Within walking around 10 minutes, guests easily can find many local foods starting from 1 USD , restaurant, convenience store, ATM.
+					</p>
+					<p style="font-size: 1em;">
+						We also offer a daily shuttle everyday and airport transfer, surf class, surf board rental, motorbike rental, towel rental, laundry service, package for going to Gili Trawangan Island/ Gili Air Island/ Nusa Lembongan Island/ Lombok Island all include with the shuttle pick up at the Hostel.
+					</p>
+					<p style="font-size: 1em;">
+						Want to explore a mountain? We also have an offer for hiking to Mt. Batur, Mt. Rinjani, Mt. Agung, and etc. 
+					</p>
+					<img src="https://ucd.hwstatic.com/propertyimages/9/98911/508.jpg" height="162px" width="260px">
+					<img src="https://ucd.hwstatic.com/propertyimages/9/98911/78.jpg" height="162px" width="260px">
+					<img src="https://ucd.hwstatic.com/propertyimages/9/98911/79.jpg" height="162px" width="260px">
+				</div>
+				<div class="four wide column">
+					<img src="https://ucd.hwstatic.com/propertyimages/9/98911/67.jpg">
+					<img src="https://ucd.hwstatic.com/propertyimages/9/98911/82.jpg">
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+
+	<section id="facilities">
+		<div class="ui vertical stripe quote segment">
+			<div class="ui equal width stackable internally celled grid container">
+				<div class="justified aligned row">
+					<div class="sixteen wide column">
+						<h3 align="center">Facilities</h3>
+						<table class="ui green table">
+						  <thead>
+						    <tr>
+						    	<th><i class="gift icon"></i>Free</th>
+						    	<th>&nbsp;</th>
+						    	<th>&nbsp;</th>
+						  	</tr>
+							</thead>
+							<tbody>
+						    <tr>
+						      <td>Linen Included</td>
+						      <td>Free Parking</td>
+						      <td>Free City Maps</td>
+						    </tr>
+						    <tr>
+						      <td>Free Wi-Fi</td>
+						      <td>Free Internet Access</td>
+						      <td></td>
+						    </tr>
+						  </tbody>
+						</table>
+						<table class="ui yellow table">
+						  <thead>
+						    <tr>
+						    	<th><i class="ticket icon"></i>General</th>
+						    	<th>&nbsp;</th>
+						    	<th>&nbsp;</th>
+						  	</tr>
+							</thead>
+							<tbody>
+						    <tr>
+						      <td>Security Lockers</td>
+						      <td>Bicycle Parking</td>
+						      <td>Breakfast not Included</td>
+						    </tr>
+						    <tr>
+						      <td>Air Conditioning</td>
+						      <td>Self-Catering Facilities</td>
+						      <td>Cable TV</td>
+						    </tr>
+						    <tr>
+						      <td>Outdoor Terrace</td>
+						      <td>Parking</td>
+						      <td>Ceiling Fan</td>
+						    </tr>
+						    <tr>
+						      <td>Card Phones</td>
+						      <td>Steam Room</td>
+						      <td></td>
+						    </tr>
+						  </tbody>
+						</table>
+						<table class="ui red table">
+						  <thead>
+						    <tr>
+						    	<th><i class="home icon"></i>Services</th>
+						    	<th>&nbsp;</th>
+						    	<th>&nbsp;</th>
+						  	</tr>
+							</thead>
+							<tbody>
+						    <tr>
+						      <td>Internet Access</td>
+						      <td>Bicycle Hire</td>
+						      <td>Towels for hire</td>
+						    </tr>
+						    <tr>
+						      <td>24 Hour Reception</td>
+						      <td>Currency Exchange</td>
+						      <td>24 Hour Security</td>
+						    </tr>
+						    <tr>
+						      <td>Housekeeping</td>
+						      <td>Late check-out</td>
+						      <td>Reception (limited hours)</td>
+						    </tr>
+						  </tbody>
+						</table>
+						<table class="ui blue table">
+						  <thead>
+						    <tr>
+						    	<th><i class="food icon"></i>Food & Drink</th>
+						    	<th>&nbsp;</th>
+						    	<th>&nbsp;</th>
+						  	</tr>
+							</thead>
+							<tbody>
+						    <tr>
+						      <td>Tea & Coffee Making Facilities</td>
+						      <td></td>
+						      <td></td>
+						    </tr>
+						  </tbody>
+						</table>
+						<table class="ui black table">
+						  <thead>
+						    <tr>
+						    	<th><i class="game icon"></i>Entertainment</th>
+						    	<th>&nbsp;</th>
+						    	<th>&nbsp;</th>
+						  	</tr>
+							</thead>
+							<tbody>
+						    <tr>
+						      <td>Games Room</td>
+						      <td></td>
+						      <td></td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="ui inverted vertical footer segment">
+		<div class="ui container">
+			<div class="ui stackable inverted divided equal height stackable grid">
+				<div class="three wide column">
+					<h4 class="ui inverted header"></h4>
+				</div>
+				<div class="seven wide column">
+					<h4 class="ui inverted header">Macskot Hostel Bali</h4>
+					<p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+<script>
+	$('.slider').glide({
+		autoplay: false,
+		arrowsWrapperClass: 'slider-arrows',
+		arrowRightText: '',
+		arrowLeftText: ''
+	});
+</script>
+</html>
